@@ -1,0 +1,12 @@
+{
+  "name": "chatgpt rtl",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "This extension only runs on mysite.com",
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*"],
+      "js": ["myscript.js"]
+    }
+  ]
+}
