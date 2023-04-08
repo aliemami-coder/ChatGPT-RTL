@@ -13,8 +13,8 @@ The ChatGPT RTL for Persian Chrome extension enhances the chat experience by ena
 
 ## Installation
 
-1. You must download zip or clone project
-2. Open extesions in chromium or open ```chrome://extensions/``` link 
+1. You must download zip or clone the project
+2. Open extension in chromium or open ```chrome://extensions/``` link 
 3. Enable developer mode
 4. unzip project if download zip
 5. Click ```Load unpacked``` and select extension folder
