@@ -4,6 +4,10 @@ function addRTLToElements(selector) {
     if (element.textContent.match(/[\u0600-\u06FF]/)) {
       element.dir = "rtl";
     }
+    if (element.nodeName === "PRE" || element.nodeName === "CODE") {
+      element.style.textAlign = "left";
+      element.dir = "ltr";
+    }
   }
 }
 
@@ -23,7 +27,7 @@ function handleMutation(mutations) {
       for (const addedNode of mutation.addedNodes) {
         if (addedNode.nodeType === Node.ELEMENT_NODE) {
           addRTLToElements(
-            "p, div.whitespace-pre-wrap.flex:not(:has(*)), ol, li",
+            "p, div.whitespace-pre-wrap.flex:not(:has(*)), ol, li ,pre ,code",
             addedNode
           );
           const input = addedNode.querySelector("textarea");
